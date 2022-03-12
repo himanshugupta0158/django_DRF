@@ -1,7 +1,8 @@
 from dataclasses import fields
-from rest_framework import serializers
-from api.models import Article
 
+from rest_framework import serializers
+
+from api.models import Article
 
 # in serializers.Serializer you have to specfy all fields
 """class ArticleSerializer(serializers.Serializer):

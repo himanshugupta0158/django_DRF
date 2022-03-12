@@ -1,39 +1,26 @@
-from urllib import response
-from django.shortcuts import render , get_object_or_404
 from django.http import HttpResponse, JsonResponse
-from rest_framework.parsers import JSONParser
-from api.models import Article
-from api.serializers import ArticleSerializer
-
-# used in class based API views
-from rest_framework.views import APIView
-from rest_framework import generics
-from rest_framework import mixins
-from rest_framework import viewsets
-
-
+from django.shortcuts import get_object_or_404, render
 # used in function based API views
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.decorators import api_view
-
+# status for data communication in rest
+from rest_framework import generics, mixins, status, viewsets
 # MAKE SURE BOTH AUTHENTICATION AND PERMISSION IS THERE IN VIEWS.
 # Authentication in Django Rest Framework
 # Basic Authentication is recommoneded to use for test Only)
-from rest_framework.authentication import (
-    SessionAuthentication , 
-    BasicAuthentication,
-    TokenAuthentication
-    )
-
+from rest_framework.authentication import (BasicAuthentication,
+                                           SessionAuthentication,
+                                           TokenAuthentication)
+from rest_framework.decorators import api_view
+from rest_framework.parsers import JSONParser
 # Permission in Django Rest Framework
 from rest_framework.permissions import IsAuthenticated
-
 # For returning a response in rest
 from rest_framework.response import Response
+# used in class based API views
+from rest_framework.views import APIView
 
-# status for data communication in rest
-from rest_framework import status
-
+from api.models import Article
+from api.serializers import ArticleSerializer
 
 # Class based API views with using REST framework
 

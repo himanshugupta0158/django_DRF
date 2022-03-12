@@ -1,19 +1,13 @@
-from django.urls import path , include
-
-# function base API view
-from api.views import article_list, article_detail
-
-# class base API view
-from api.views import ArticleAPIView, ArticleDetails
-
-# Generics & Mixins
-from api.views import GenericAPIView
-
-# Viewset
-from api.views import ArticleViewSet
-
+from django.urls import include, path
 # Using DRF Router for Url/Routing
 from rest_framework.routers import DefaultRouter
+
+# Viewset
+# Generics & Mixins
+# class base API view
+# function base API view
+from api.views import (ArticleAPIView, ArticleDetails, ArticleViewSet,
+                       GenericAPIView, article_detail, article_list)
 
 router = DefaultRouter()
 router.register('article', ArticleViewSet, basename="article")
