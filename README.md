@@ -41,7 +41,7 @@ pip3 install virtualenv #if using linux(for python 3 and above)
 
 **bash**
 ```
-git clone https://github.com/himanshugupta0158/DRF_poc.git
+git clone https://github.com/himanshugupta0158/django_DRF.git
 ```
 - This will clone whole project
 
@@ -63,4 +63,9 @@ source venv/bin/activate # for linux
 # install required packages for the project to run
 ```
 pip install django djangorestframework
+```
+
+#### If you are using image data in your database model make sure you install 
+```
+pip install pillow
 ```
